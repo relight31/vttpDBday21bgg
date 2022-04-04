@@ -1,0 +1,9 @@
+# json object but without curly braces
+name: my first workflow
+on: ["push"]
+jobs:
+  my-first-workflow:
+    runs-on: ubuntu-latest #only ubuntu or container
+    steps:
+    - name: echo date on Github
+      run: echo "The current time/date on Github is $(date)"
