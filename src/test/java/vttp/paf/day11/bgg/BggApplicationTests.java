@@ -41,4 +41,10 @@ class BggApplicationTests {
 		List<Comment> comments = repo.getCommentsByGID(10);
 		assertTrue(comments.size() > 0);
 	}
+
+	@Test
+	void shouldReturnEmptyList() {
+		List<Comment> comments = repo.getCommentsByGID(-1);
+		assertTrue(comments.size() == 0);
+	}
 }
